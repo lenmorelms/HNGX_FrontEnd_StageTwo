@@ -1,38 +1,90 @@
-.App {
+.header {
+  /* background-image: url("./assets/john-whick.jpg"); */
+  min-height: 200px;
+}
+.header-navigation {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 2rem;
+}
+.header-navigation > div {
+  margin: 0 2rem;
+  width: 100%;
+}
+.header-search {
+  margin-right: 5rem;
+}
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  border-radius: 50px;
+}
+.search-input[type=text] {
+  background-color: lightgrey;
+}
+.header-menu {
+  float: left;
+}
+.header-description {
+  display: block;
+  max-width: 40%;
+  margin: 2rem;
+}
+.header-description-btn {
+  padding: 0.8rem 1.2rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: medium;
+}
+.header-description-btn:hover {
+  padding: 1rem 1.4rem;
+  background-color: aqua;
+  transition: 0.5s;
+  cursor: hand;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-list .movie-card {
+  /* flex: 1; */
+  /* max-width: 550px; */
+  min-width: 120px;
+  margin: 1.5rem;
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.footer {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-socials {
+  padding: 1%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-socials {
+  padding: 2%;
+  height: 1.5%; width: 1.5%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.footer-policies {
+  padding: 1%;
 }
-
-.App-link {
-  color: #61dafb;
+.footer-policies span {
+  padding: 2%;
+  font-weight: bolder;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-copyright {
+  color: slategrey;
 }
