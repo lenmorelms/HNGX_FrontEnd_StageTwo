@@ -1,11 +1,2 @@
-import { spiderman } from "../Imports/Imports"
-
-const Movies = [
-    {
-        "poster": spiderman,
-        "card": spiderman,
-        "title": "Movie Title",
-        "date": "2023-23-10",
-    }
-]
+const Movies = [0.,1,2,3,4,5];
 export default Movies;

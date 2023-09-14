@@ -1,26 +1,47 @@
-import React from "react";
-import { spiderman } from "./Imports/Imports";
-import Image from "./Image";
+import { React, useState, useEffect } from 'react';
+import axios from "axios";
+import Header from './Header';
+import MovieCard from './partials/MovieCard';
 
+import MoviesArray from './movies/Movies';
+
+//f093b7f56c445a5255c4568aea1a539d
 const Movies = () => {
-    let MovieList = [];
-    for(let i = 0; i < 10; i++) {
-        MovieList.push( 
-            <div className="movie-card">
-                <a href="#">
-                <div className="movie-poster"> 
-                    <Image className="movie-poster-img" src={spiderman} alt="Movie Poster" />
-                </div>
-                <div className="movie-title">Spiderman Homecoming</div>
-                <div className="movie-release-date">2021-09-09</div>
-                </a>
-            </div>
-        );
+    
+    // get movies from TMDB
+    function useTMDBAPI(url = "https://api.themoviedb.org/3/discover/movie?api_key=f093b7f56c445a5255c4568aea1a539d&page=1") {
+        const [moviesData, setMoviesData] = useState([]);
+    
+        useEffect(() => {
+            const fetchData = async () => {
+                const result = await axios(url);
+                //return only the first 10 movies
+                setMoviesData(result.data.results.slice(0, 10));
+            };
+            fetchData();
+        }, [url]);
+    
+       return moviesData;
     }
+    const movieData = useTMDBAPI();
+    let movieList = [];
+    movieData.forEach((movie)=> { 
+        console.log(movie.title);
+        movieList.push(<MovieCard
+            href={`/movies/${movie.id}`}
+            src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            title={movie.title}
+            release_date={movie.release_date}
+        />)
+    })
     return (
+        <>
+        {MoviesArray}
+        <Header />
         <div className="movie-list">
-           {MovieList}
+           {movieList}
         </div>
+        </>
     );
 }
 
