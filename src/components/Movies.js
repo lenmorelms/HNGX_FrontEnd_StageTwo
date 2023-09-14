@@ -3,8 +3,6 @@ import axios from "axios";
 import Header from './Header';
 import MovieCard from './partials/MovieCard';
 
-import MoviesArray from './movies/Movies';
-
 //f093b7f56c445a5255c4568aea1a539d
 const Movies = () => {
     
@@ -34,10 +32,19 @@ const Movies = () => {
             release_date={movie.release_date}
         />)
     })
+    // const dispatch = useDispatch();
+
+    // const movieList = useSelector((state) => state.movieList);
+    // const { loading, error, movies } = movieList;
+
+    // useEffect(() => {
+    //     dispatch(listMovie());
+    // }, [dispatch]);
+
     return (
         <>
-        {MoviesArray}
         <Header />
+        <h3 className="movie-list-heading">Featured Movies</h3>
         <div className="movie-list">
            {movieList}
         </div>

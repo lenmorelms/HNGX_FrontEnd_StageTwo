@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "./partials/Logo";
 import Search from "./partials/Search";
 import Menu from "./partials/Menu";
 // import { Link, useHistory } from "react-router-dom";
@@ -9,12 +8,12 @@ const Header = () => {
         <div className="header">
             <div className="header-navigation">
                 <div className="header-logo">
-                    <Logo />
-                </div>
-                <div className="header-menu">
-                    <Search />
+                    <h2>Movie<span>Box</span></h2>
                 </div>
                 <div className="header-search">
+                    <Search />
+                </div>
+                <div className="header-menu">
                     <Menu />
                 </div>
             </div>  

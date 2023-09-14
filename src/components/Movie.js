@@ -27,7 +27,7 @@ const Movie = () => {
         <MovieDetails
             src={`https://image.tmdb.org/t/p/w500/${movieData.backdrop_path}`}
             title={movieData.title}
-            release_date={movieData.release_date}
+            release_date={Date(movieData.release_date)}
             runtime={movieData.runtime}
             overview={movieData.overview}
         />
