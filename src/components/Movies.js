@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import axios from "axios";
 import Header from './Header';
-import MovieCard from './partials/MovieCard';
+import Card from './partials/Card';
 
 //f093b7f56c445a5255c4568aea1a539d
 const Movies = () => {
@@ -25,7 +25,7 @@ const Movies = () => {
     let movieList = [];
     movieData.forEach((movie)=> { 
         console.log(movie.title);
-        movieList.push(<MovieCard
+        movieList.push(<Card
             data-testid="movie-card"
             href={`/movies/${movie.id}`}
             src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}

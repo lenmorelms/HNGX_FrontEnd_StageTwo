@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../Image";
 
-const MovieCard = (props) => {
+const Card = (props) => {
     return (
         <div className="movie-card">
             <a href={props.href}>
@@ -15,4 +15,4 @@ const MovieCard = (props) => {
     )
 };
 
-export default MovieCard;
+export default Card;
