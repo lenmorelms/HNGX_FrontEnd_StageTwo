@@ -4,7 +4,7 @@ import Image from "../Image";
 const MovieCard = (props) => {
     return (
         <div className="movie-card">
-            <a data-testid="movie-card" href={props.href}>
+            <a href={props.href}>
             <div className="movie-poster"> 
                 <Image data-testid="movie-poster" className="movie-poster-img" src={props.src} alt="Movie Poster" />
             </div>

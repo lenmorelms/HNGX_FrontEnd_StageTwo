@@ -26,6 +26,7 @@ const Movies = () => {
     movieData.forEach((movie)=> { 
         console.log(movie.title);
         movieList.push(<MovieCard
+            data-testid="movie-card"
             href={`/movies/${movie.id}`}
             src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
             title={movie.title}
