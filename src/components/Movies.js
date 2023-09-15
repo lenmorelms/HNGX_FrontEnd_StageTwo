@@ -7,7 +7,8 @@ import Card from './partials/Card';
 const Movies = () => {
     
     // get movies from TMDB
-    function useTMDBAPI(url = "https://api.themoviedb.org/3/discover/movie?api_key=f093b7f56c445a5255c4568aea1a539d&page=1") {
+    // DISCOVER MOVIES: https://api.themoviedb.org/3/discover/movie?api_key=f093b7f56c445a5255c4568aea1a539d&page=1
+    function useTMDBAPI(url = "https://api.themoviedb.org/3/movie/top_rated?api_key=f093b7f56c445a5255c4568aea1a539d") {
         const [moviesData, setMoviesData] = useState([]);
     
         useEffect(() => {
