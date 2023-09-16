@@ -14,7 +14,7 @@ const MovieCard = (props) => {
             </div>
             <div className="movie-details-overview">
                 <div data-testid="movie-overview" className="movie-details-overview-msg">{props.overview}</div>
-                <div><button className="movie-details-overview-btn">Add to Favourites</button></div>
+                <div><button className="movie-details-overview-btn">See Showtimes</button></div>
             </div>
         </div>
     )

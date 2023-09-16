@@ -3,7 +3,7 @@ import Image from "../Image";
 
 const Card = (props) => {
     return (
-        <div className="movie-card">
+        <div data-testid="movie-card" className="movie-card">
             <a href={props.href}>
             <div className="movie-poster"> 
                 <Image data-testid="movie-poster" className="movie-poster-img" src={props.src} alt="Movie Poster" />

@@ -27,7 +27,6 @@ const Movies = () => {
     movieData.forEach((movie)=> { 
         console.log(movie.title);
         movieList.push(<Card
-            data-testid="movie-card"
             href={`/movies/${movie.id}`}
             src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
             title={movie.title}
@@ -46,7 +45,7 @@ const Movies = () => {
     return (
         <>
         <Header />
-        <h3 className="movie-list-heading">Featured Movies</h3>
+        <h3 className="movie-list-heading">Featured Movie</h3>
         <div className="movie-list">
            {movieList}
         </div>
